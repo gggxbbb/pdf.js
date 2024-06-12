@@ -2161,6 +2161,8 @@ if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
     "null",
     "http://mozilla.github.io",
     "https://mozilla.github.io",
+    "http://pdf.gxb.icu",
+    "https://pdf.gxb.icu"
   ];
   // eslint-disable-next-line no-var
   var validateFileURL = function (file) {
@@ -2178,7 +2180,7 @@ if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
       // start accepting URLs from foreign origin -- CORS headers on the remote
       // server must be properly configured.
       if (fileOrigin !== viewerOrigin) {
-        throw new Error("file origin does not match viewer's");
+        //throw new Error("file origin does not match viewer's");
       }
     } catch (ex) {
       PDFViewerApplication._documentError("pdfjs-loading-error", {
